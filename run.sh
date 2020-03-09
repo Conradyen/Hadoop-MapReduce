@@ -1,28 +1,28 @@
 #!/bin/sh
 
-Q1_JAR_PATH=~/Documents/CS6350_Big_data/assignments/assignment1/out/artifacts/assignment1_jar/assignment1.jar
-Q2_JAR_PATH=~/Documents/CS6350_Big_data/assignments/assignment1/Q2/out/artifacts/Q2_jar/Q2.jar
-Q3_JAR_PATH=~/Documents/CS6350_Big_data/assignments/assignment1/Q3/out/artifacts/Q3_jar/Q3.jar
-Q4_JAR_PATH=~/Documents/CS6350_Big_data/assignments/assignment1/Q4/out/artifacts/Q4_jar/Q4.jar
+FIRST_JAR_PATH=[PATH_TO_FILE]
+SECOND_JAR_PATH=[PATH_TO_FILE]
+THIED_JAR_PATH=[PATH_TO_FILE]
+FOURTH_JAR_PATH=[PATH_TO_FILE]
 
-DATA_INPUT_1=/user/assignment1/soc-Livejornal1adj.txt
-DATA_INPUT_2=/user/assignment1/userdata.txt
+DATA_INPUT_1=[PATH_TO_soc-Livejornal1adj.txt]
+DATA_INPUT_2=[PATH_TO_userdata.txt]
 
-Q1_OUT_PATH=/user/assignment1/userdataout
+COMMONF_OUT_PATH=[OUT_PATH]
 
-Q2_OUT_PATH_1=/user/assignment1/temp
-Q2_OUT_PATH_2=/user/assignment1/Q2out
+TOP_F_OUT_PATH_1=[TEMP_OUT_PATH]
+TOP_F_OUT_PATH_2=[OUT_PATH]
 
-Q3_OUT_PATH_1=/user/assignment1/Q3temp
-Q3_OUT_PATH_2=/user/assignment1/Q3out
+DOB_OUT_PATH_1=[TEMP_OUT_PATH]
+DOB_OUT_PATH_2=[OUT_PATH]
 
-Q4_OUT_PATH_1=/user/assignment1/Q4temp
-Q4_OUT_PATH_2=/user/assignment1/Q4out
+MAX_OUT_PATH_1=[TEMP_OUT_PATH]
+MAX_OUT_PATH_2=[OUT_PATH]
 
-./hadoop jar ${Q1_JAR_PATH} $DATA_INPUT_1 $Q1_OUT_PATH
+./hadoop jar ${Q1_JAR_PATH} $DATA_INPUT_1 $COMMONF_OUT_PATH
 
-./hadoop jar $Q2_JAR_PATH $DATA_INPUT_1 $Q2_OUT_PATH_1 $Q2_OUT_PATH_2
+./hadoop jar $Q2_JAR_PATH $DATA_INPUT_1 $TOP_F_OUT_PATH_1 $QTOP_F_OUT_PATH_2
 
-./hadoop jar $Q3_JAR_PATH $DATA_INPUT_1 $DATA_INPUT_2 $Q3_OUT_PATH_1 $Q3_OUT_PATH_2
+./hadoop jar $Q3_JAR_PATH $DATA_INPUT_1 $DATA_INPUT_2 $DOB_OUT_PATH_1 $DOB_OUT_PATH_2
 
-./hadoop jar $Q4_JAR_PATH $DATA_INPUT_1 $DATA_INPUT_2 $Q4_OUT_PATH_1 $Q4_OUT_PATH_2
+./hadoop jar $Q4_JAR_PATH $DATA_INPUT_1 $DATA_INPUT_2 $MAX_OUT_PATH_1 $MAX_OUT_PATH_2
