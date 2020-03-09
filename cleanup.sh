@@ -1,80 +1,75 @@
 
 #!/bin/sh
  ./hdfs dfsadmin -safemode leave
+ 
+COMMONF_OUT_PATH=[OUT_PATH]
 
- # OUT=./hadoop dfs -test -f user/assignment1/mapreduceout/part-r-00000
- # echo "${OUT}"
+TOP_F_OUT_PATH_1=[TEMP_OUT_PATH]
+TOP_F_OUT_PATH_2=[OUT_PATH]
+
+DOB_OUT_PATH_1=[TEMP_OUT_PATH]
+DOB_OUT_PATH_2=[OUT_PATH]
+
+MAX_OUT_PATH_1=[TEMP_OUT_PATH]
+MAX_OUT_PATH_2=[OUT_PATH]
+
 #Q1
 echo "clean Q1 output ..."
-# if[ [./hadoop fs -test -f "user/assignment1/mapreduceout/part-r-00000" -eq 0] ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/userdataout/part-r-00000
-# if[ (./hadoop fs -test -f /user/assignment1/mapreduceout/_SUCCESS) -eq 0 ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/userdataout/_SUCCESS
-# if[ (./hadoop fs -test -d /user/assignment1/mapreduceout) -eq 0 ]then
-  ./hdfs dfs -rmdir /user/assignment1/userdataout
+# remove part-r-00000
+./hdfs dfs -rm -r -f [COMMONF_OUT_PATH/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [COMMONF_OUT_PATH/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [COMMONF_OUT_PATH]
 echo "Q1 output removed "
 
 
 #Q2
 echo "clean Q2 output ..."
-# if[ (./hadoop fs -test -f /user/assignment1/Q2out/part-r-00000) -eq 0 ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q2out/part-r-00000
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q2out/_SUCCESS) -eq 0 ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q2out/_SUCCESS
-
-# if[ (./hadoop fs -test -f /user/assignment1/temp/part-r-00000) -eq 0 ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/temp/part-r-00000
-
-# if[ (./hadoop fs -test -f /user/assignment1/temp/_SUCCESS) -eq 0 ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/temp/_SUCCESS
-
-# if[ (./hadoop fs -test -d /user/assignment1/Q2out) -eq 0 ]then
-  ./hdfs dfs -rmdir /user/assignment1/Q2out
-
-# if[ (./hadoop fs -test -d /user/assignment1/temp) -eq ${0} ]then
-  ./hdfs dfs -rmdir /user/assignment1/temp
+  
+# remove part-r-00000
+./hdfs dfs -rm -r -f [TOP_F_OUT_PATH_1/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [TOP_F_OUT_PATH_1/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [TOP_F_OUT_PATH_1]
+# remove part-r-00000
+./hdfs dfs -rm -r -f [TOP_F_OUT_PATH_2/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [TOP_F_OUT_PATH_2/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [TOP_F_OUT_PATH_2]
 echo "Q2 output removed "
 
 #Q3
 echo "clean Q3 output ..."
-# if[ (./hadoop fs -test -f /user/assignment1/Q3out/part-r-00000) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q3out/part-r-00000
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q3out/_SUCCESS) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q3out/_SUCCESS
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q3temp/part-r-00000) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q3temp/part-r-00000
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q3temp/_SUCCESS) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q3temp/_SUCCESS
-
-# if[ (./hadoop fs -test -d /user/assignment1/Q3out) -eq ${0} ]then
-  ./hdfs dfs -rmdir /user/assignment1/Q3out
-
-# if[ (./hadoop fs -test -d /user/assignment1/Q3temp) -eq ${0} ]then
-  ./hdfs dfs -rmdir /user/assignment1/Q3temp
+# remove part-r-00000
+./hdfs dfs -rm -r -f [DOB_OUT_PATH_1/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [DOB_OUT_PATH_1/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [DOB_OUT_PATH_1]
+# remove part-r-00000
+./hdfs dfs -rm -r -f [DOB_OUT_PATH_2/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [DOB_OUT_PATH_2/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [DOB_OUT_PATH_2]
 echo "Q3 output removed "
 
 
 #Q4
 echo "clean Q4 output ..."
-# if[ (./hadoop fs -test -f /user/assignment1/Q4out/part-r-00000) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q4out/part-r-00000
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q4out/_SUCCESS) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q4out/_SUCCESS
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q4temp/part-r-00000) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q4temp/part-r-00000
-
-# if[ (./hadoop fs -test -f /user/assignment1/Q4temp/_SUCCESS) -eq ${0} ]then
-  ./hdfs dfs -rm -r -f /user/assignment1/Q4temp/_SUCCESS
-
-# if[ (./hadoop fs -test -d /user/assignment1/Q4out) -eq ${0} ]then
-  ./hdfs dfs -rmdir /user/assignment1/Q4out
-
-# if[ (./hadoop fs -test -d /user/assignment1/Q4temp) -eq ${0} ]then
-  ./hdfs dfs -rmdir /user/assignment1/Q4temp
+# remove part-r-00000
+./hdfs dfs -rm -r -f [MAX_OUT_PATH_1/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [MAX_OUT_PATH_1/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [MAX_OUT_PATH_1]
+# remove part-r-00000
+./hdfs dfs -rm -r -f [MAX_OUT_PATH_2/part-r-00000]
+# remove _SUCCESS
+./hdfs dfs -rm -r -f [MAX_OUT_PATH_2/_SUCCESS]
+# remove dir
+./hdfs dfs -rmdir [MAX_OUT_PATH_2]
 echo "Q4 output removed "
