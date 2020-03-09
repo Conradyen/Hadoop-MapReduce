@@ -73,7 +73,26 @@ column10 : date of birth.
 And do the following.
 
 Step 1: Calculate the maximum age of the direct friends of each user.
+
 Step 2: Sort the users based on the calculated maximum age in descending order as described in step 1.
+
 Step 3. Output the top 10 users from step 2 with their address and the calculated maximum age.
 
 
+# To Run
+
+```
+chmod u+x run.sh
+./run.sh
+```
+
+## cleanup.sh
+
+cleanup.sh will delete all output files.
+
+```
+chmod u+x cleanup.sh
+./cleanup.sh
+```
+
+- Note that all file are only tested on single node.
