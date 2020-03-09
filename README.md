@@ -81,6 +81,8 @@ Step 3. Output the top 10 users from step 2 with their address and the calculate
 
 # To Run
 
+Change all file path in run.sh and cleanup.sh
+
 ```
 chmod u+x run.sh
 ./run.sh
